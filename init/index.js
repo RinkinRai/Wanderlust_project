@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const initData = require("./data.js");
 const Listing = require("../models/listing.js");
 
-const MONGO_URL ="mongodb+srv://rairinki6:K8AkNYSt1TCotcKO@cluster0.5ijd5wq.mongodb.net/wanderlust?retryWrites=true&w=majority&appName=Cluster0";
+const MONGO_URL = process.env.MONGO_URL;
 
 main().then(() =>{
     console.log("connected to DB");
